@@ -68,9 +68,8 @@ export default function HeroSequence() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: "+=3000",
+        end: "bottom top",
         scrub: 0.5,
-        pin: true,
       },
     });
 
