@@ -21,9 +21,9 @@ export default function HeroSequence() {
     canvas.height = window.innerHeight;
 
     const frameCount = 122;
+    const basePath = "/sumit-portfolio";
     const currentFrame = (index: number) =>
-      `/sequence/ezgif-frame-${(index + 1).toString().padStart(3, "0")}.jpg`;
-
+      `${basePath}/sequence/ezgif-frame-${(index + 1).toString().padStart(3, "0")}.jpg`;
     const images: HTMLImageElement[] = [];
     const airpods = {
       frame: 0,
