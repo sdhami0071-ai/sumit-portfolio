@@ -19,13 +19,15 @@ export default function AboutSection() {
     // Split text into words or span-wrapped lines for GSAP
     // Here we do a simple opacity/y fade in for the whole container first.
     // A staggering effect on words provides the "reveal on scroll" feel.
-    const words = textEl.innerText.split(" ");
+    const words = textEl.innerText.split(/\s+/);
     textEl.innerHTML = "";
     words.forEach(word => {
+      if (!word) return;
       const span = document.createElement("span");
-      span.innerText = word + " ";
+      span.innerText = word;
       span.className = "word";
       textEl.appendChild(span);
+      textEl.appendChild(document.createTextNode(" "));
     });
 
     const spans = textEl.querySelectorAll(".word");
